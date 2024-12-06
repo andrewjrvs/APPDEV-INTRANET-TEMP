@@ -78,7 +78,6 @@ ingress:
     - hosts:
         - appdev.samaritanspurse.org
         - "*.appdev.samaritanspurse.org"
-        - "test.appdev.samaritanspurse.org"
       secretName: appdev-intranet-cert        
   #  - secretName: chart-example-tls
   #    hosts:
