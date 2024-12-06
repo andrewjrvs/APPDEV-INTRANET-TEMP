@@ -67,11 +67,16 @@ ingress:
     - host: appdev.samaritanspurse.org
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
+    - host: test.appdev.samaritanspurse.org
+      paths:
+        - path: /
+          pathType: Prefix
   tls: 
     - hosts:
         - appdev.samaritanspurse.org
         - "*.appdev.samaritanspurse.org"
+        - "test.appdev.samaritanspurse.org"
       secretName: appdev-intranet-cert        
   #  - secretName: chart-example-tls
   #    hosts:
